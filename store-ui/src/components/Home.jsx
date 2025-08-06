@@ -1,4 +1,5 @@
 import PageHeading from "./PageHeading";
+import ProductListing from "./ProductListing";
 import { useState, useEffect } from "react";
 
 //hooks
