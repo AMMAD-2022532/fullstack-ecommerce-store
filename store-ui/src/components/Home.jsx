@@ -1,6 +1,7 @@
 import PageHeading from "./PageHeading";
 import ProductListing from "./ProductListing";
 import { useState, useEffect } from "react";
+import apiClient from "../api/apiClient";
 
 //hooks
 export default function Home() {
