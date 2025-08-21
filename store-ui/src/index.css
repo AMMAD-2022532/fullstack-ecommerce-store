@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap");
-
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-primary: "Josefin Sans";
-  --color-primary: #5b21b6;
-  --color-dark: #4c1d95;
-  --color-lighter: #f5f3ff;
-  --color-light: #ddd6fe;
+  --color-primary: #2563eb; /* Modern blue */
+  --color-dark: #1e3a8a; /* Dark blue for hover */
+  --color-lighter: #eff6ff; /* Light background */
+  --color-light: #bfdbfe; /* Soft border/accent */
+  --color-normalbg: #f3f4f6;
+  --color-darkbg: #1e2939;
 }

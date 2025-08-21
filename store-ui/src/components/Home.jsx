@@ -1,7 +1,7 @@
 import PageHeading from "./PageHeading";
 import ProductListing from "./ProductListing";
-import { useState, useEffect } from "react";
 import apiClient from "../api/apiClient";
+import { useState, useEffect } from "react";
 
 //hooks
 export default function Home() {
@@ -51,6 +51,7 @@ export default function Home() {
         Supplying premium quality flowers for daily buyers, events, and
         wholesale partners. Bulk and custom orders available year-round.
       </PageHeading>
+
       <ProductListing products={products} />
     </div>
   );
