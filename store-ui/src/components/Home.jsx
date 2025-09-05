@@ -1,33 +1,28 @@
-import { useLoaderData } from "react-router-dom";
-import apiClient from "../api/apiClient";
 import PageHeading from "./PageHeading";
 import ProductListing from "./ProductListing";
+import apiClient from "../api/apiClient";
+import { useLoaderData } from "react-router-dom";
 
 export default function Home() {
   const products = useLoaderData();
 
   return (
-    <main className="max-w-[1152px] mx-auto px-6 py-8">
-      <PageHeading title="Explore all kinds of flowers!">
-        Premium-quality blooms for daily buyers, events, and wholesale partners.
-        Bulk and custom orders available year-round.
+    <div className="max-w-[1152px] mx-auto px-6 py-8">
+      <PageHeading title="Explore All kind of Flowers!">
+        Supplying premium quality flowers for daily buyers, events, and
+        wholesale partners. Bulk and custom orders available year-round.
       </PageHeading>
 
-      <div className="mt-6">
-        <ProductListing products={products} />
-      </div>
-    </main>
+      <ProductListing products={products} />
+    </div>
   );
 }
 
-// Loader: fetch product list via Axios (apiClient uses base URL from .env)
 export async function productsLoader() {
   try {
-    // Axios GET request
-    const response = await apiClient.get("/products");
+    const response = await apiClient.get("/products"); //axios get request saved in apiClient  //axios is libraray to http req get put etc we save our api in .env file thsn save in axios file
     return response.data;
   } catch (error) {
-    // Re-throw for the route errorElement to handle
     throw new Response(
       error.message || "Failed to fetch products. Please try again.",
       { status: error.status || 500 }
